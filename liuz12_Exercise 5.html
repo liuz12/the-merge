@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+ 
+<p>BUS 104 Order Tracking</p>
+  
+<script>
+/* Zixiong Liu
+    Section BB */
+    
+var prodCode = ["LT", "ST", "DC", "LC", "PR", "SP"];
+var shipVol = [5, 3, 3.75, 2, 2.5, 0.5];
+var unitPrice = [1000, 600, 650, 800, 375, 350];
+var i;
+var totalPrice = 0;
+var totalVolume = 0;
+var totalTrucks = 0;
+var totalItems = 0;
+    
+
+
+do {
+    var inputCode = prompt("Please enter a product code (LT, ST, DC, LC, PR, SP):", "LT");
+    var inputUnit = Number(prompt("How many would you like? (enter 0 to quit)", 100));
+
+    for(i = 0; i < prodCode.length; i++) {
+        if (inputCode === prodCode[i]){
+            totalPrice = totalPrice + inputUnit * unitPrice[i];
+            totalVolume = totalVolume + inputUnit * shipVol[i];
+            totalItems = totalItems + inputUnit;
+        }
+    }
+} while (inputUnit != 0);
+
+totalTrucks = totalVolume / 1500;
+
+alert("There are a total of " + totalItems + " items in this order. The total value of the order is $" + totalPrice + " and the total volume is " + totalVolume + " cu.ft., which will reauire " + Math.ceil(totalTrucks) + " trucks to ship.");
+ 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+ 
+<p>BUS 104 Lab Exercise 1</p>
+  
+<script>
+/*
+Zixiong Liu
+Section BB
+*/
+
+var userSalary = prompt("Please enter your salary (gross in $)", 50000);
+var userTaxCode = prompt("Please enter your tax bracket code (A or B)", "A");
+var grossPay;
+var netPay;
+    
+
+if (userSalary > 50000) {
+    
+    if (userTaxCode === "A") {
+        grossPay = userSalary;
+        netPay = (1-.2) * grossPay - 550;
+        alert("Your gross pay is $" + grossPay + ". Your net pay is $" + netPay + ".");
+    }
+    else if (userTaxCode === "B") {
+        alert("The uesr entred 1 and B");
+    }
+    else ("Please enter A or B");
+}
+else if (foo === "2") {
+    alert("The user entered 2.");
+}
+else if (foo === "3") {
+    alert("The user entered 3.");
+}
+else{
+    alert("The test was not true.");
+}
+    
+</script>
+
+</body>
+</html>
